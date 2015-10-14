@@ -1,0 +1,39 @@
+<h1>Listing Trackees</h1>
+
+<div class="col-md-10 col-md-push-1">
+	<div class="col-md-2 col-md-pull-1" style="margin-top:-40px">
+<%= link_to 'New Trackee', new_trackee_path, :class => "new-trackee" %>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Last login</th>
+      <th>Login count</th>
+      <th>Trackbrowser</th>
+      <th>Track</th>
+      <th>Flag</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trackees.each do |trackee| %>
+      <tr>
+        <td><%= trackee.name %></td>
+        <td><%= trackee.last_login %></td>
+        <td><%= trackee.login_count %></td>
+        <td><%= trackee.trackBrowser %></td>
+        <td><%= trackee.track %></td>
+        <td><%= trackee.flag %></td>
+        <td><%= link_to 'Show', trackee %></td>
+        <td><%= link_to 'Edit', edit_trackee_path(trackee) %></td>
+        <td><%= link_to 'Destroy', trackee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+</div>

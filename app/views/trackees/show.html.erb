@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @trackee.name %>
+</p>
+
+<p>
+  <strong>Last login:</strong>
+  <%= @trackee.last_login %>
+</p>
+
+<p>
+  <strong>Login count:</strong>
+  <%= @trackee.login_count %>
+</p>
+
+<p>
+  <strong>Trackbrowser:</strong>
+  <%= @trackee.trackBrowser %>
+</p>
+
+<p>
+  <strong>Track:</strong>
+  <%= @trackee.track %>
+</p>
+
+<p>
+  <strong>Flag:</strong>
+  <%= @trackee.flag %>
+</p>
+
+<%= link_to 'Edit', edit_trackee_path(@trackee) %> |
+<%= link_to 'Back', trackees_path %>

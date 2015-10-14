@@ -1,2 +1,49 @@
-<h3>Welcome</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<style>
+.users{
+	width:100px !important; height:70px !important;
+	background:rgba(0,200,100,0.8) !important;
+	border:1px solid black;
+	color:white !important;
+	padding:10px;
+	font-weight:bold;
+	text-decoration:none !important;
+}
+</style>
+<h3 style="text-align:center; margin-bottom:40px;">Welcome</h3>
+<p><%= link_to 'Users:', users_path, :class => "users" %> <%= User.count %> registered</p>
+<br><br>
+<form id="settings" method="" action="">
+<div class="row">
+	<div class="col-md-4 col-md-push-2">
+		<div class="onoffswitch">
+			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="trackUser">
+			<label class="onoffswitch-label" for="trackUser">
+				<span class="onoffswitch-inner"></span>
+				<span class="onoffswitch-switch"></span>
+			</label>
+		</div>
+		<div class="panel">
+			<h2>TRACK USER </h2>
+		</div>
+	</div>
+	<div class="col-md-4 col-md-push-3">
+		<div class="onoffswitch">
+			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="trackBHistory">
+			<label class="onoffswitch-label" for="trackBHistory">
+				<span class="onoffswitch-inner"></span>
+				<span class="onoffswitch-switch"></span>
+			</label>
+		</div>
+		<div class="panel">
+			<h2>TRACK BROWSER HISTORY </h2>
+		</div>
+	</div>
+
+	</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-md-push-4">
+	<button class="download" type="submit">DOWNLOAD</button>
+</div>
+</div>
+</form>
